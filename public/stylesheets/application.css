@@ -1,0 +1,232 @@
+body {
+  background-color: #4B7399;
+  font-family: 'Lucida Grande',Helvetica,Arial,sans-serif;
+  font-size: 15px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #333333;
+}
+
+a:hover {
+  background-color:#333333;
+  color:#FFFFFF;
+  text-decoration:none;
+}
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+.footer {
+    text-align:center;
+    padding-top:30px;
+}
+
+.clear {
+  clear: both;
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+}
+
+/**************** Notice, error, success flash messages [start] ******************/
+#flash_success, #flash_notice, #flash_error {
+	padding: 5px 8px;
+  	margin: 10px 0;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+}
+
+#flash_success {
+    background-color: #e4ffd2;
+    color: #264409;
+    border-color: #c6d880;
+}
+
+#flash_notice {
+  	border: solid 1px #6C6;
+    background-color: #fff6bf;
+    color: #514721;
+    border-color: #ffd324;
+}
+
+#flash_error {
+	border: solid 1px #C66;
+    background-color: #fbe3e4;
+    color: #8a1f11;
+    border-color: #fbc2c4;
+}
+
+div.fieldWithErrors input, div.fieldWithErrors textarea, div.fieldWithErrors select {
+    border: 2px solid #8c0000;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+/**************** Notice, error, success flash messages [end] ******************/
+
+/**************** Styles for forms [start] ******************/
+.form.center {
+    margin: auto;
+    z-index: 1;
+    width: 400px;
+}
+
+.form input {
+    font-family: Georgia;
+    font-size: 22px;
+}
+/**************** Styles for forms [end] ******************/
+
+/**************** Sortable table styles [start] ******************/
+table.sortable {
+    width:100%;
+    font-size: 12px;
+    border: 1px solid black;
+    border-spacing: 0;
+    padding: 0;
+    cell-spacing: 0;
+}
+
+table.sortable thead {
+    font-size:14px;
+    background-color:#333333;
+    border-color:gray;
+    color:#fff;
+    margin: 0;
+    text-align:left;
+	cursor: pointer;
+}
+
+table.sortable td.sorttable_sorted { 
+    background-color: #7C7C7C;
+}
+
+table.sortable td.sorttable_sorted_reverse { 
+    background-color: #ACACAC;
+}
+
+table.sortable thead a { 
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+table.sortable tr.dark {
+    background: #f2f2f2;
+}
+/**************** Sortable table styles [end] ******************/
+
+/**************** member_details styles [start] ******************/
+table.member_details {
+    width:100%;
+    font-size: 12px;
+    border: 1px solid black;
+    border-spacing: 0;
+    padding: 0;
+}
+
+table.member_details tr.dark {
+    background: #E2E2E2;
+}
+
+table.member_main_details {
+    width:100%;
+    font-size: 12px;
+    border-spacing: 0;
+    padding: 0;
+}
+
+table.member_main_details tr.dark {
+    background: #E2E2E2;
+}
+/**************** admin_table styles [end] ******************/
+
+/**************** Pagination styles [start] ******************/
+.pagination {
+    display:inline;
+}
+
+.pagination a{
+	text-decoration:none;
+	padding: 0px 5px 0px 5px;
+}
+
+.pagination .current {
+    color:#7C7C7C;
+}
+
+div.pages {
+	margin-bottom:15px;
+}
+/**************** Pagination styles [end] ******************/
+
+td.important {
+	color: red;
+}
+
+div#left-column{
+    float :left;
+    width :500px;
+}
+
+div#right-column{
+    float :right;
+    width :220px;
+}
+
+ul.category-list{
+    list-style :none;
+    margin:0;
+padding:0;
+}
+#user_nav{
+    float:right;
+    font-size:12;
+}
