@@ -119,8 +119,8 @@ div.fieldWithErrors input, div.fieldWithErrors textarea, div.fieldWithErrors sel
 }
 
 .form input {
-    font-family: Georgia;
-    font-size: 22px;
+    font-family:times new roman;
+    font-size: 13px;
 }
 /**************** Styles for forms [end] ******************/
 
@@ -230,3 +230,34 @@ padding:0;
     float:right;
     font-size:12;
 }
+
+
+ ul#tab-container-1-nav {
+         overflow:visible;
+         width:auto;
+         margin:0;
+         padding:7px 0; }
+ ul#tab-container-1-nav li {
+         display:inline;
+         list-style:none; }
+ ul#tab-container-1-nav li a {
+         padding:8px 13px;
+         text-decoration:none!important;
+         margin:5px -2px 4px 0;
+         font-size:80%;
+         font-weight:bold;
+         color:#000;
+         background:#CCC;
+         border:1px solid #999999;
+         outline:none;
+         border-bottom:none; }
+ ul#tab-container-1-nav li a:hover {
+         color:#000;
+         background:#F1F1F1; }
+ ul#tab-container-1-nav li a.active {
+         margin-bottom:0;
+         color:#000;
+         background:#FFF;
+         border-bottom:1px solid #FFF;
+         cursor:default; }
+

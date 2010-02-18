@@ -1,4 +1,12 @@
 <% title "Edit profile" %>
+ <div class="one-block">
+  <div id="tab-container-1">
+   <ul id="tab-container-1-nav">
 
+     <li><%= link_to "Personal information", :controller=>"home",:action=>"edit_profile" %></li>
+     <li><%= link_to "Account information", edit_user_path(:current) %></li>
+   </ul>
 <%= render :partial => 'form' %>
+</div>
+</div>
 

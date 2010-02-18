@@ -9,10 +9,16 @@
       <% unless @user.last_name.blank? %><label>lasttname</label> <%= @user.last_name %><%end%>
     </div>
     <div class="element2">
-      <% unless @user.gender.blank? %><label>Gender</label> <%= @user.gender %><%end%>
+      <% unless @user.gender.blank? %>
+        <label>Gender</label>
+        <% if @user.gender=='m'%>male<% elsif @user.gender=='f' %>female<% else %>Unsure<%end%>
+     <%end%>
     </div>
     <div class="element1">
-      <% unless @user.relation_status.blank? %><label>Relation status</label> <%= @user.relation_status %><%end%>
+      <% unless @user.relation_status.blank? %>
+        <label>Relation status</label>
+        <% if @user.relation_status=='na'%>no answer<% elsif @user.relation_status=='s' %>single<% elsif @user.relation_status=='m' %>married<% elsif @user.relation_status=='c' %>committed<% elsif @user.relation_status=='op' %>open marriage<% else %>open relationship<%end%>
+      <%end%>
     </div>
     <div class="element2">
       <% unless @user.birth_day.blank? %><label>DOB</label> <%= @user.birth_day %><%end%>

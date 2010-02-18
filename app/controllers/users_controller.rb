@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     @user = current_user
     if @user.update_attributes(params[:user])
       flash[:notice] = "Successfully updated user."
-      redirect_to login_path
+      redirect_to home_path
     else
       render :action => 'edit'
     end

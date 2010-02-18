@@ -1,0 +1,8 @@
+<%  @users.each do |user|%>
+  <%unless user.friends.include?(current_user)%>
+  <div>
+    <%=user.username%> 	<%= link_to 'Add as friend', :controller=>'home', :action=>'add_friends', :id=>user.id %>
+  </div>
+  <%end%>
+  
+<%end%>
