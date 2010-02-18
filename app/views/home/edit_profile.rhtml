@@ -1,0 +1,68 @@
+<% title "Edit Profile" %>
+<% form_for @user do |f| %>
+  <div class="one-block">
+  <div id="tab-container-1">
+   <ul id="tab-container-1-nav">
+  
+     <li ><%= link_to "Personal information", :controller=>"home",:action=>"edit_profile"  %></li>
+     <li><%= link_to "Account information", edit_user_path(:current) %></li>
+   </ul>
+  
+<h2>Personal information</h2>
+<div class="block">
+  <div class="form">
+    <%= f.error_messages %>
+    <div class="element">
+      <label> first name:</label>
+      <%= f.text_field :first_name %>
+    </div>
+    <div class="element">
+      <label>last name:</label>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="element">
+      <label>date of birth:</label>
+      <%= date_select 'user', 'birth_day', {:order=>[:day, :month, :year], :start_year=>1900} %><br />
+	</div>
+    <div class="element">
+      <label>gender:</label>
+      <%= select 'user', 'gender', @sexes %>
+	</div>
+     <div class="element">
+      <label>relationship status:</label>
+      <%= select 'user', 'relation_status', @status %>
+	</div>
+    <div class="element">
+			<label>country:</label>
+			<%= select 'user', 'country', @countries %><br />
+		</div>
+    <div class="element">
+      <label>city:</label>
+      <%= f.text_field :city %>
+    </div>
+    <div class="element">
+      <label>state:</label>
+      <%= f.text_field :state %>
+    </div>
+    <div class="element">
+      <label>zip/postal code:</label>
+      <%= f.text_field :zip %>
+    </div>
+    <div class="element">
+      <label>high school:</label>
+      <%= f.text_field :high_school %>
+    </div>
+    <div class="element">
+      <label>college/university:</label>
+      <%= f.text_field :college %>
+    </div>
+    <div class="element">
+      <label>organisation:</label>
+      <%= f.text_field :organisation %>
+    </div>
+    <%= f.submit "Update" %>
+  </div>
+</div>
+</div>
+</div>
+<% end %>

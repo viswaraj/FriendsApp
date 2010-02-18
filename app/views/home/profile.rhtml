@@ -1,0 +1,42 @@
+
+
+<div class="block">
+  <div class="form">
+    <div class="element2">
+      <% unless @user.first_name.blank? %><label>Firstname</label> <%= @user.first_name %><%end%>
+    </div>
+    <div class="element1">
+      <% unless @user.last_name.blank? %><label>lasttname</label> <%= @user.last_name %><%end%>
+    </div>
+    <div class="element2">
+      <% unless @user.gender.blank? %><label>Gender</label> <%= @user.gender %><%end%>
+    </div>
+    <div class="element1">
+      <% unless @user.relation_status.blank? %><label>Relation status</label> <%= @user.relation_status %><%end%>
+    </div>
+    <div class="element2">
+      <% unless @user.birth_day.blank? %><label>DOB</label> <%= @user.birth_day %><%end%>
+    </div>
+    <div class="element1">
+      <% unless @user.city.blank? %><label>City</label> <%= @user.city %><%end%>
+    </div>
+    <div class="element2">
+      <% unless @user.state.blank? %><label>State</label> <%= @user.state %><%end%>
+    </div>
+    <div class="element1">
+      <% unless @user.country.blank? %><label>Country</label> <%= @user.country %><%end%>
+    </div>
+    <div class="element2">
+      <% unless @user.zip.blank? %><label>Zip/postal code</label> <%= @user.zip %><%end%>
+    </div>
+    <div class="element1">
+      <% unless @user.high_school.blank? %><label>high school</label> <%= @user.high_school %><%end%>
+    </div>
+    <div class="element2">
+      <% unless @user.college.blank? %><label>college</label> <%= @user.college %><%end%>
+    </div>
+    <div class="element1">
+      <% unless @user.organisation.blank? %><label>organisation</label> <%= @user.organisation %><%end%>
+    </div>
+  </div>
+</div>
