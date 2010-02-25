@@ -1,8 +1,20 @@
+<%unless @users.blank?%><h3>Members:</h3><%end%>
 <%  @users.each do |user|%>
   <%unless user.friends.include?(current_user)%>
-  <div>
-    <%=user.username%> 	<%= link_to 'Add as friend', :controller=>'home', :action=>'add_friends', :id=>user.id %>
-  </div>
+    <div>
+      <%=user.username%> <%= link_to 'Add as friend', :controller=>'home', :action=>'add_friends', :id=>user.id %>
+    </div>
   <%end%>
-  
+<%end%>
+<%unless @friends.blank?%> <h3>Friends:</h3><%end%>
+<%  @friends.each do |friend|%>
+  <div>
+    <%=friend.username%>
+  </div>
+<%end%>
+<%unless @requests.blank?%> <h3>Request:</h3><%end%>
+<%  @requests.each do |friend|%>
+  <div>
+    <%=friend.username%> <%= link_to 'Confirm', :controller=>'home', :action=>'confirm_friends', :id=>friend.id %>
+  </div>
 <%end%>

@@ -128,10 +128,12 @@ h4 { font-size:9pt; padding:6px 6px 3px 0; margin:0 0 4px 0; border-bottom:1px d
 li.highlight a { font-weight:bold; }
 
 .form .element { position:relative; padding-left:120px; margin-bottom:6px; }
+.form .request { position:relative; padding-left:100px; margin-bottom:6px; }
 .form .element2 {  font-family: 'Times New Roman';position:relative; padding-left:120px; margin-bottom:6px;font-size:12px; }
 .form .element1 {  font-family: 'Times New Roman';position:relative; padding-left:120px; margin-bottom:6px;font-size:12px;background:#ccffff }
 .form label { font-size:12px;position:absolute; width:110px; left:0; top:2px; text-align:right; color:#555; }
 .form .help { font-size:8pt; color:#888888; }
+
 
 strong { font-weight:bold; }
 em { font-style:italic; }
@@ -513,4 +515,10 @@ ul.twitterfeeds li { background-color:#f1f1f1; padding:5px; margin:0 0 -6px 64px
 ul.twitterfeeds img { position:absolute; top:0; left:-66px;width:60px;height:50px; }
 ul.twitterfeeds p.twitter-status { background-color:#f1f1f1; padding:15px; margin-bottom:10px; }
 
-
+ul.request { margin:12px 0; }
+ul.request p.title { font-size:11pt;font-weight:bold;margin:0 0 8px 0; }
+ul.request p.credits { font-size:9pt;font-weight:normal;margin:8px 0 0 0; }
+ul.request li { background-color:#f1f1f1; padding:12px; margin:0 0 12px 157px; position:relative; min-height:85px; height:auto !important; height:85px; }
+ul.request img { position:static; top:0; left:-157px; }
+ul.request a:hover { background-color:white; }
+ul.request h3{margin:0 0 12px 157px;}
