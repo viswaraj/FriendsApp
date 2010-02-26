@@ -1,0 +1,11 @@
+<%if @friends.blank?%><h3>No Friends:</h3><%end%>
+<%  @friends.each do |friend|%>
+  <div class="element">
+    <%if friend.first_name.nil?%>
+      <%= link_to friend.username, :controller=>"home",:action=>"profile",:id=>friend.id %>
+    <%else%>
+      <%= link_to friend.name, :controller=>"home",:action=>"profile",:id=>friend.id %>
+    <%end%>
+  <%= link_to "remove", {:controller=>'home', :action=>'destroy_friends', :id=>friend.id} ,:confirm => "Are you sure you want to remove this friend ?" %>
+  </div>
+<%end%>

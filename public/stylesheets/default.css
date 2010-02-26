@@ -520,5 +520,5 @@ ul.request p.title { font-size:11pt;font-weight:bold;margin:0 0 8px 0; }
 ul.request p.credits { font-size:9pt;font-weight:normal;margin:8px 0 0 0; }
 ul.request li { background-color:#f1f1f1; padding:12px; margin:0 0 12px 157px; position:relative; min-height:85px; height:auto !important; height:85px; }
 ul.request img { position:static; top:0; left:-157px; }
-ul.request a:hover { background-color:white; }
+ul.request a:hover { background-color:transparent; color:#CA3A14; }
 ul.request h3{margin:0 0 12px 157px;}
