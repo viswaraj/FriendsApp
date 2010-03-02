@@ -30,7 +30,7 @@
       <% unless @user.state.blank? %><label>State</label> <%= @user.state %><%end%>
     </div>
     <div class="element1">
-      <% unless @user.country.blank? %><label>Country</label> <%= @user.country %><%end%>
+      <% unless @user.country.blank? %><label>Country</label> <%= @user.country.name %><%end%>
     </div>
     <div class="element2">
       <% unless @user.zip.blank? %><label>Zip/postal code</label> <%= @user.zip %><%end%>

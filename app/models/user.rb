@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
-  has_attached_file :photo , :styles => { :small => "150*150>" }
+  has_attached_file :photo , :styles => { :small => "140*150>" }
   acts_as_authentic
   has_many :friends_list
   has_many :friends, :through => :friends_list
-
+belongs_to :country
 
   GENDER_U = "u"
 	GENDER_M = "m"

@@ -4,7 +4,9 @@ class HomeController < ApplicationController
     if current_user.nil?
       redirect_to login_path
     else
-     @requests = User.find(:all, :joins=>"INNER JOIN  friends_lists ON users.id = friends_lists.friend_id", :conditions => ["friends_lists.user_id = ? and friends_lists.accepted = 'requested'",current_user.id])
+      @user=current_user
+      @requests = User.find(:all, :joins=>"INNER JOIN  friends_lists ON users.id = friends_lists.friend_id", :conditions => ["friends_lists.user_id = ? and friends_lists.accepted = 'requested'",current_user.id])
+      @friends = User.find(:all, :joins=>"INNER JOIN  friends_lists ON users.id = friends_lists.friend_id", :conditions => ["friends_lists.user_id = ? and friends_lists.accepted = 'confirm'",current_user.id])
     end
   end
 
@@ -43,7 +45,7 @@ def remove_friends
       if friends_already?(current_user.id, params[:id])
       remove_friend(current_user.id, params[:id])
     end
-    redirect_to home_path
+    redirect_to :action=>"view_friends"
 
 end
 

@@ -1,11 +1,34 @@
-<%if @friends.blank?%><h3>No Friends:</h3><%end%>
+  <ul class="friends">
+<h3><%if @friends.blank?%>No Friends:<%else%>friends (<%= @friends.count %>)<%end%></h3>
 <%  @friends.each do |friend|%>
-  <div class="element">
-    <%if friend.first_name.nil?%>
+ 
+      <li>
+        <%= link_to image_tag(friend.photo.url(:small)),:controller=>"home",:action=>"profile",:id=>friend.id%>
+        <p class="title">  <%if friend.first_name.nil?%>
       <%= link_to friend.username, :controller=>"home",:action=>"profile",:id=>friend.id %>
     <%else%>
       <%= link_to friend.name, :controller=>"home",:action=>"profile",:id=>friend.id %>
     <%end%>
-  <%= link_to "remove", {:controller=>'home', :action=>'destroy_friends', :id=>friend.id} ,:confirm => "Are you sure you want to remove this friend ?" %>
-  </div>
+    </p>
+     <p class="details"><% unless friend.gender.blank? %>
+        <% if friend.gender=='m'%>male<% elsif friend.gender=='f' %>female<% else %>Unsure<%end%>
+     <%end%>
+     <% unless friend.gender.blank? && friend.relation_status.blank? %>,<%end%>
+       <% unless friend.relation_status.blank? %>
+         <% if friend.relation_status=='na'%>no answer<% elsif friend.relation_status=='s' %>single<% elsif friend.relation_status=='m' %>married<% elsif friend.relation_status=='c' %>committed<% elsif friend.relation_status=='op' %>open marriage<% else %>open relationship<%end%>
+      <%end%></p>
+       <p class="details">
+      <% unless friend.city.blank? %><%= friend.city %><%end%>
+       <% unless friend.city.blank? && friend.country.blank? %>,<%end%>
+      <% unless friend.country.blank? %> <%= friend.country.name %><%end%>
+   </p>
+    <%= link_to "remove", {:controller=>'home', :action=>'remove_friends', :id=>friend.id} ,:confirm => "Are you sure you want to remove this friend ?" %>
+      
+    </li>
 <%end%>
+  </ul>
+
+  
+  
+  
+ 

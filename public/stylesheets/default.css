@@ -515,10 +515,38 @@ ul.twitterfeeds li { background-color:#f1f1f1; padding:5px; margin:0 0 -6px 64px
 ul.twitterfeeds img { position:absolute; top:0; left:-66px;width:60px;height:50px; }
 ul.twitterfeeds p.twitter-status { background-color:#f1f1f1; padding:15px; margin-bottom:10px; }
 
-ul.request { margin:12px 0; }
-ul.request p.title { font-size:11pt;font-weight:bold;margin:0 0 8px 0; }
-ul.request p.credits { font-size:9pt;font-weight:normal;margin:8px 0 0 0; }
-ul.request li { background-color:#f1f1f1; padding:12px; margin:0 0 12px 157px; position:relative; min-height:85px; height:auto !important; height:85px; }
-ul.request img { position:static; top:0; left:-157px; }
+div.profile a:hover { background-color:transparent; color:#CA3A14; }
+div.profile img{float:left; margin-right:20px;}
+div.profile h2{background:none; font-size:16pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0; color:black;}
+
+ul.request {}
+ul.request p.title { margin-left:88px;font-size:11pt;font-weight:bold; }
+ul.request p.credits { font-size:9pt;font-weight:normal;margin:8px 0 0 88px; }
+ul.request li { background-color:#f1f1f1; padding:10px; margin:0 0 12px 157px; position:relative; min-height:85px; height:auto !important; height:85px; }
+ul.request img.yes { position:static; top:0; left:-157px; width:auto;height:auto; }
+ul.request img { position:absolute; top:10px; left:10px; width:70px;height:80px; }
 ul.request a:hover { background-color:transparent; color:#CA3A14; }
 ul.request h3{margin:0 0 12px 157px;}
+
+ul.profile{ padding:0px; margin:0 0 0 0; position:relative; min-height:140px; height:auto !important; height:140px;}
+ul.profile p.title { padding-left:160px;font-size:14pt;font-weight:bold;padding-top:10px;color:black; }
+ul.profile p.details { margin:0 0 0 160px;;font-size:10pt;padding-bottom:1px;color:#999999; }
+ul.profile img { position:absolute; top:10px; left:0;}
+ul.profile a:hover { background-color:transparent; color:#CA3A14; }
+
+ul.friends {}
+ul.friends p.title { margin-left:88px;font-size:11pt;font-weight:bold; }
+ul.friends p.details { margin:0 0 0 88px;;font-size:10pt;padding-bottom:1px;color:#999999; }
+ul.friends li { background-color:#f1f1f1; padding:10px; margin:0 0 12px 157px; position:relative; min-height:85px; height:auto !important; height:85px; }
+ul.friends img.yes { position:static; top:0; left:-157px; width:auto;height:auto; }
+ul.friends img { position:absolute; top:10px; left:10px; width:70px;height:80px; }
+ul.friends a:hover { background-color:transparent; color:#CA3A14; }
+ul.friends h3{margin:0 0 12px 157px;}
+
+li {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+    }
+
+   

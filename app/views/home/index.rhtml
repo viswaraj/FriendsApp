@@ -1,22 +1,40 @@
 <% title "Home" %>
-<div>
-  <%unless  current_user.photo.url=="Missing"%> <%= image_tag current_user.photo.url(:small)%><%end%>
-  <%= link_to current_user.username, :controller=>"home",:action=>"profile",:id=>current_user.id %>
-</div>
+<ul class="profile">
+  <%=link_to image_tag(@user.photo.url(:small)),:controller=>"home",:action=>"profile",:id=>@user.id %>
+  <p class="title"> <%= link_to @user.username, :controller=>"home",:action=>"profile",:id=>@user.id %></p>
+  <p class="details"><% unless @user.gender.blank? %>
+        <% if @user.gender=='m'%>male<% elsif @user.gender=='f' %>female<% else %>Unsure<%end%>
+     <%end%>
+     <% unless @user.gender.blank? && @user.relation_status.blank? %>,<%end%>
+       <% unless @user.relation_status.blank? %>
+         <% if @user.relation_status=='na'%>no answer<% elsif @user.relation_status=='s' %>single<% elsif @user.relation_status=='m' %>married<% elsif @user.relation_status=='c' %>committed<% elsif @user.relation_status=='op' %>open marriage<% else %>open relationship<%end%>
+      <%end%></p>
+       <p class="details">
+      <% unless @user.city.blank? %><%= @user.city %><%end%>
+       <% unless @user.city.blank? && @user.country.blank? %>,<%end%>
+      <% unless @user.country.blank? %> <%= @user.country.name %><%end%>
+   </p>
+
+</ul>
 <div>
   <%= link_to "view all", :controller=>"home",:action=>"view_members" %>
 </div>
 <div>
   <%= link_to "Friends", :controller=>"home",:action=>"view_friends" %>
 </div>
-<ul class="request">
-  <%unless @requests.blank?%> <h3>new friend requests (<%= @requests.count %>)</h3><%end%>
-  <%  @requests.each do |friend|%>
-    <li>
-      <p class="title"><%= link_to "#{friend.name.to_s} < #{friend.email.to_s} >" ,:controller=>"home",:action=>"profile",:id=>friend.id%> </p>
-      <p class="summary">Is <%=friend.username%> your friend?</p>
-      <%= link_to image_tag("/images/yes3.jpg",:title=>'yes'),:controller=>'home', :action=>'confirm_friends', :id=>friend.id%>
-      <%= link_to image_tag("/images/no1.jpg",:title=>'no'), :controller=>'home', :action=>'destroy_friends', :id=>friend.id %>
-    <%end%>
-  </li>
-</ul>
+<div id="block-main">
+  <ul class="request">
+    <%unless @requests.blank?%> <h3>new friend requests (<%= @requests.count %>)</h3><%end%>
+    <%  @requests.each do |friend|%>
+      <li>
+        <%= link_to image_tag(friend.photo.url(:small)),:controller=>"home",:action=>"profile",:id=>friend.id%>
+        <p class="title"><%= link_to "#{friend.name.to_s} < #{friend.email.to_s} >",:controller=>"home",:action=>"profile",:id=>friend.id%> </p>
+        <p class="credits">Is <%=friend.username%> your friend?</p>
+        <p class="credits"> <%= link_to image_tag("/images/yes3.jpg",:title=>'yes',:class=>"yes"),:controller=>'home', :action=>'confirm_friends', :id=>friend.id%>
+        <%= link_to image_tag("/images/no1.jpg",:title=>'no',:class=>"yes"), :controller=>'home', :action=>'destroy_friends', :id=>friend.id %></p>
+      <%end%>
+    </li>
+  </ul>
+  </div>
+
+
