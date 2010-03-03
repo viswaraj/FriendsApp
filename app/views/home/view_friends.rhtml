@@ -22,8 +22,9 @@
        <% unless friend.city.blank? && friend.country.blank? %>,<%end%>
       <% unless friend.country.blank? %> <%= friend.country.name %><%end%>
    </p>
-    <%= link_to "remove", {:controller=>'home', :action=>'remove_friends', :id=>friend.id} ,:confirm => "Are you sure you want to remove this friend ?" %>
-      
+   <p class="credits">
+  <%= link_to "remove", {:controller=>'home', :action=>'remove_friends', :id=>friend.id} ,:confirm => "Are you sure you want to remove this friend ?" %>
+      </p>
     </li>
 <%end%>
   </ul>

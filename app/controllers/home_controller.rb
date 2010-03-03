@@ -49,6 +49,22 @@ def remove_friends
 
 end
 
+def scrap_book
+@scrap=Scrap.new
+@scraps=  Scrap.find(:all,:select=>"scraps.*,users.id,users.username,users.first_name,users.photo_file_name,users.photo_content_type,users.photo_file_size", :joins=>"LEFT JOIN  users ON users.id = scraps.friend_id", :conditions => ["scraps.user_id = ?",params[:id]],:order=>"scraps.created_at DESC")
+
+end
+def send_scrap
+@scrap=Scrap.new(params[:scrap])
+@scrap.friend_id=current_user.id
+
+
+@scrap.save
+ redirect_to :action=>"scrap_book", :id=>params[:scrap][:user_id]
+end
+
+
+
 
 
   def confirm_friends

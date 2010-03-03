@@ -1,39 +1,46 @@
 
-
-<div class="block">
-  <div class="form">
-    <div class="element2">
-      <% unless @user.first_name.blank? %><label>Firstname</label> <%= @user.first_name %><%end%>
-    </div>
-    <div class="element1">
-      <% unless @user.last_name.blank? %><label>lasttname</label> <%= @user.last_name %><%end%>
-    </div>
-    <div class="element2">
-      <% unless @user.gender.blank? %>
-        <label>Gender</label>
+<ul class="detail">
+   <%=link_to image_tag(@user.photo.url(:small)),:controller=>"home",:action=>"profile",:id=>@user.id %>
+ <p class="title"> <%= link_to @user.username, :controller=>"home",:action=>"profile",:id=>@user.id %></p>
+  <p class="details"><% unless @user.gender.blank? %>
         <% if @user.gender=='m'%>male<% elsif @user.gender=='f' %>female<% else %>Unsure<%end%>
      <%end%>
-    </div>
+     <% unless @user.gender.blank? && @user.relation_status.blank? %>,<%end%>
+       <% unless @user.relation_status.blank? %>
+         <% if @user.relation_status=='na'%>no answer<% elsif @user.relation_status=='s' %>single<% elsif @user.relation_status=='m' %>married<% elsif @user.relation_status=='c' %>committed<% elsif @user.relation_status=='op' %>open marriage<% else %>open relationship<%end%>
+      <%end%>
+      <br>
+      <% unless @user.city.blank? %><%= @user.city %><%end%>
+       <% unless @user.city.blank? && @user.country.blank? %>,<%end%>
+      <% unless @user.country.blank? %> <%= @user.country.name %><%end%>
+    </p>
+    <p class="credits">
+         <%=link_to "scrap book",:controller=>"home",:action=>"scrap_book",:id=>@user.id %>
+    </p>
+
+</ul>
+  <div class="friend">
+  
     <div class="element1">
       <% unless @user.relation_status.blank? %>
-        <label>Relation status</label>
+        <label>relation status</label>
         <% if @user.relation_status=='na'%>no answer<% elsif @user.relation_status=='s' %>single<% elsif @user.relation_status=='m' %>married<% elsif @user.relation_status=='c' %>committed<% elsif @user.relation_status=='op' %>open marriage<% else %>open relationship<%end%>
       <%end%>
     </div>
     <div class="element2">
-      <% unless @user.birth_day.blank? %><label>DOB</label> <%= @user.birth_day %><%end%>
+      <% unless @user.birth_day.blank? %><label>dob</label> <%= @user.birth_day %><%end%>
     </div>
     <div class="element1">
-      <% unless @user.city.blank? %><label>City</label> <%= @user.city %><%end%>
+      <% unless @user.city.blank? %><label>city</label> <%= @user.city %><%end%>
     </div>
     <div class="element2">
-      <% unless @user.state.blank? %><label>State</label> <%= @user.state %><%end%>
+      <% unless @user.state.blank? %><label>state</label> <%= @user.state %><%end%>
     </div>
     <div class="element1">
-      <% unless @user.country.blank? %><label>Country</label> <%= @user.country.name %><%end%>
+      <% unless @user.country.blank? %><label>country</label> <%= @user.country.name %><%end%>
     </div>
     <div class="element2">
-      <% unless @user.zip.blank? %><label>Zip/postal code</label> <%= @user.zip %><%end%>
+      <% unless @user.zip.blank? %><label>zip/postal code</label> <%= @user.zip %><%end%>
     </div>
     <div class="element1">
       <% unless @user.high_school.blank? %><label>high school</label> <%= @user.high_school %><%end%>
@@ -45,4 +52,6 @@
       <% unless @user.organisation.blank? %><label>organisation</label> <%= @user.organisation %><%end%>
     </div>
   </div>
-</div>
+
+
+  

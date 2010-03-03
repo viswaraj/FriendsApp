@@ -537,8 +537,9 @@ ul.profile a:hover { background-color:transparent; color:#CA3A14; }
 ul.friends {}
 ul.friends p.title { margin-left:88px;font-size:11pt;font-weight:bold; }
 ul.friends p.details { margin:0 0 0 88px;;font-size:10pt;padding-bottom:1px;color:#999999; }
+ul.friends p.credits { font-size:9pt;font-weight:normal;margin:8px 0 0 88px; }
 ul.friends li { background-color:#f1f1f1; padding:10px; margin:0 0 12px 157px; position:relative; min-height:85px; height:auto !important; height:85px; }
-ul.friends img.yes { position:static; top:0; left:-157px; width:auto;height:auto; }
+ul.friends img.yes { margin-left:88px;position:static; top:0; left:-157px; width:100px;height:25px; }
 ul.friends img { position:absolute; top:10px; left:10px; width:70px;height:80px; }
 ul.friends a:hover { background-color:transparent; color:#CA3A14; }
 ul.friends h3{margin:0 0 12px 157px;}
@@ -548,5 +549,23 @@ list-style-image:none;
 list-style-position:outside;
 list-style-type:none;
     }
+.friend {margin:-183px 0 0 190px}
+.friend  .element2 {  font-family: 'Times New Roman';position:relative; padding-left:120px; margin-bottom:6px;font-size:12px; }
+.friend  .element1 {  font-family: 'Times New Roman';position:relative; padding-left:120px; margin-bottom:6px;font-size:12px;background:#ccffff }
+.friend  label { font-size:12px;position:absolute; width:110px; left:0; top:2px; text-align:right; color:#555; }
+.friend  .help { font-size:8pt; color:#888888; }
 
-   
+ul.detail{ padding:180px 0 0 0 ; margin:48px 0 0 0; position:relative; min-height:140px; height:auto !important; height:140px;}
+ul.detail p.title {padding:0 0 0 29px;font-size:14pt;font-weight:bold;color:black;margin:-62px 0 0 -13px}
+ul.detail p.details {padding:16px 0 0 2px;font-size:10pt;color:#999999; margin-top:-14px}
+ul.detail p.credits { padding:16px 0 0 2px;font-size:9pt;font-weight:normal; }
+ul.detail img { position:absolute; top:10px; left:0;}
+ul.detail a:hover { background-color:transparent; color:#CA3A14; }
+
+ul.scrap{ }
+ul.scrap p.title {padding:0 0 0 0;font-size:14pt;font-weight:bold;color:black;margin-top:-62px}
+ul.scrap p.details {padding:20px 0 0 0;font-size:10pt;color:#999999; margin-top:0   }
+ul.scrap li { background-color:#f1f1f1; padding:79px 0 0 161px; margin:0 0 12px 157px; position:relative; min-height:53px; height:auto !important; height:85px; }
+ul.scrap p.credits { padding:0 0 0 0;font-size:9pt;font-weight:normal;float:right;margin-right:14px;margin-top:-72px }
+ul.scrap img { position:absolute; top:10px; left:0;}
+ul.scrap a:hover { background-color:transparent; color:#CA3A14; }

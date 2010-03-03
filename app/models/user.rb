@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_attached_file :photo , :styles => { :small => "140*150>" }
   acts_as_authentic
   has_many :friends_list
+  has_many :scrap
   has_many :friends, :through => :friends_list
 belongs_to :country
 

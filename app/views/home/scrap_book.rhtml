@@ -1,0 +1,22 @@
+Scrap
+<% form_tag({:controller=>'home',:action => 'send_scrap', :id=>@scrap}) do  %>
+  <%=text_area 'scrap','scrap_message', 'rows'=>5 %>
+  <%= hidden_field 'scrap', 'user_id', 'value'=>params[:id]  %>
+  <%= submit_tag 'scrap',:id=>params[:id] %>
+<%end%>
+<ul class="scrap">
+<%@scraps.each do |scrap|%>
+  <li>
+  <%= link_to image_tag(scrap.photo.url(:small)),:controller=>"home",:action=>"profile",:id=>scrap.friend_id%>
+    <p class="credits"><%=scrap.created_at.strftime(" %b %d ")%></p>
+      <p class="title">  <%if scrap.first_name.nil?%>
+      <%= link_to scrap.username, :controller=>"home",:action=>"profile",:id=>scrap.friend_id %>
+    <%else%>
+      <%= link_to scrap.first_name, :controller=>"home",:action=>"profile",:id=>scrap.friend_id  %>
+    <%end%>
+  <p class="details"> <%=scrap.scrap_message%>   </p>
+
+
+  </li>
+  <%end%>
+  </ul>
