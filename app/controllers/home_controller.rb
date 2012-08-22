@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-#honme Folder
+
   def index
     if current_user.nil?
       redirect_to login_path
